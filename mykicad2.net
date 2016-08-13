@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/meteo/mykicad2/mykicad2.sch)
-    (date "Sat 13 Aug 2016 21:00:37 AEST")
+    (date "Sat 13 Aug 2016 21:09:03 AEST")
     (tool "Eeschema 4.0.2+dfsg1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -65,7 +65,7 @@
       (tstamp 57AEF5C6))
     (comp (ref P1)
       (value CONN_01X06)
-      (footprint Pin_Headers:Pin_Header_Angled_1x06)
+      (footprint Pin_Headers:Pin_Header_Straight_1x06)
       (libsource (lib conn) (part CONN_01X06))
       (sheetpath (names /) (tstamps /))
       (tstamp 57AEFB7C)))
