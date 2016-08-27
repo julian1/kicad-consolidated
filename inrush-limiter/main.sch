@@ -334,7 +334,7 @@ Text GLabel 1550 3050 0    60   Input ~ 0
 AC-neut
 Text GLabel 2300 1850 2    60   Input ~ 0
 AC-live-f
-Text GLabel 1600 2250 0    60   Input ~ 0
+Text GLabel 1550 2250 0    60   Input ~ 0
 AC-live-f
 Text GLabel 4600 4400 0    60   Input ~ 0
 AC-live-f
