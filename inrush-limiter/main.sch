@@ -68,17 +68,6 @@ F 3 "" H 2050 2700 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_01X06 P1
-U 1 1 57C0BF7B
-P 1150 1200
-F 0 "P1" H 1150 1500 50  0000 C CNN
-F 1 "CONN_01X06" V 1250 1200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 1150 1200 50  0001 C CNN
-F 3 "" H 1150 1200 50  0000 C CNN
-	1    1150 1200
-	-1   0    0    1   
-$EndComp
-$Comp
 L FUSE F1
 U 1 1 57C0C016
 P 1900 1850
@@ -326,7 +315,7 @@ Text GLabel 1550 3050 0    60   Input ~ 0
 AC-neut
 Text GLabel 2300 1850 2    60   Input ~ 0
 AC-live-f
-Text GLabel 1550 2250 0    60   Input ~ 0
+Text GLabel 1600 2250 0    60   Input ~ 0
 AC-live-f
 Text GLabel 4600 4400 0    60   Input ~ 0
 AC-live-f
@@ -342,7 +331,7 @@ F 3 "" H 5850 4500 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1550 2250 1800 2250
+	1600 2250 1800 2250
 Wire Wire Line
 	1800 2250 1900 2250
 Wire Wire Line
@@ -500,63 +489,46 @@ Wire Wire Line
 Connection ~ 4950 2650
 Text GLabel 6450 4300 2    60   Input ~ 0
 AC-live-out
-Text GLabel 1950 1050 2    60   Input ~ 0
+Text GLabel 2500 1450 2    60   Input ~ 0
 AC-neut
 Wire Wire Line
 	2300 1850 2150 1850
-Text GLabel 1950 1250 2    60   Input ~ 0
-AC-live-out
-Wire Wire Line
-	1350 1050 1700 1050
-Wire Wire Line
-	1700 1050 1950 1050
 Wire Wire Line
 	1650 1850 1500 1850
-Wire Wire Line
-	1700 1050 1700 1150
-Wire Wire Line
-	1700 1150 1350 1150
-Connection ~ 1700 1050
-Wire Wire Line
-	1950 1250 1350 1250
-Text GLabel 1950 850  2    60   Input ~ 0
+Text GLabel 1950 1150 2    60   Input ~ 0
 AC-live
 Wire Wire Line
-	1950 850  1700 850 
+	1950 1150 1700 1150
 Wire Wire Line
-	1700 850  1700 950 
+	1700 1150 1700 1250
 Wire Wire Line
-	1700 950  1350 950 
+	1700 1250 1350 1250
 $Comp
 L +5V #PWR05
 U 1 1 57C33EC3
-P 2900 1250
-F 0 "#PWR05" H 2900 1100 50  0001 C CNN
-F 1 "+5V" H 2900 1390 50  0000 C CNN
-F 2 "" H 2900 1250 50  0000 C CNN
-F 3 "" H 2900 1250 50  0000 C CNN
-	1    2900 1250
+P 4250 1200
+F 0 "#PWR05" H 4250 1050 50  0001 C CNN
+F 1 "+5V" H 4250 1340 50  0000 C CNN
+F 2 "" H 4250 1200 50  0000 C CNN
+F 3 "" H 4250 1200 50  0000 C CNN
+	1    4250 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR06
 U 1 1 57C33F05
-P 2900 1550
-F 0 "#PWR06" H 2900 1300 50  0001 C CNN
-F 1 "GND" H 2900 1400 50  0000 C CNN
-F 2 "" H 2900 1550 50  0000 C CNN
-F 3 "" H 2900 1550 50  0000 C CNN
-	1    2900 1550
+P 4250 1500
+F 0 "#PWR06" H 4250 1250 50  0001 C CNN
+F 1 "GND" H 4250 1350 50  0000 C CNN
+F 2 "" H 4250 1500 50  0000 C CNN
+F 3 "" H 4250 1500 50  0000 C CNN
+	1    4250 1500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2900 1550 2900 1450
+	4250 1500 4250 1400
 Wire Wire Line
-	2900 1450 1350 1450
-Wire Wire Line
-	1350 1350 2900 1350
-Wire Wire Line
-	2900 1350 2900 1250
+	4250 1300 4250 1200
 Wire Wire Line
 	6200 4300 6200 4500
 Wire Wire Line
@@ -584,14 +556,50 @@ Wire Wire Line
 Wire Wire Line
 	2500 4450 2500 4100
 $Comp
-L RELAY_2RT K?
+L RELAY_2RT K1
 U 1 1 57C3B514
 P 5150 4450
-F 0 "K?" H 5100 4850 50  0000 C CNN
+F 0 "K1" H 5100 4850 50  0000 C CNN
 F 1 "RELAY_2RT" H 5300 3950 50  0000 C CNN
-F 2 "" H 5150 4450 50  0000 C CNN
+F 2 "Relays_ThroughHole:Relay_DPDT_Schrack-RT2_RM5mm" H 5150 4450 50  0001 C CNN
 F 3 "" H 5150 4450 50  0000 C CNN
 	1    5150 4450
 	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1350 1550 1550 1550
+Text GLabel 1550 1550 2    60   Input ~ 0
+AC-live-out
+Text GLabel 2100 1300 2    60   Input ~ 0
+AC-neut
+Wire Wire Line
+	1350 1450 1450 1450
+Wire Wire Line
+	1450 1450 1450 1350
+Wire Wire Line
+	1450 1350 2100 1300
+Wire Wire Line
+	2500 1450 1350 1350
+$Comp
+L CONN_01X02 P2
+U 1 1 57C3DE82
+P 4050 1350
+F 0 "P2" H 4050 1650 50  0000 C CNN
+F 1 "CONN_01X02" V 4150 1350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 4050 1350 50  0001 C CNN
+F 3 "" H 4050 1350 50  0000 C CNN
+	1    4050 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X04 P?
+U 1 1 57C3EB1A
+P 1150 1400
+F 0 "P?" H 1150 1650 50  0000 C CNN
+F 1 "CONN_01X04" V 1250 1400 50  0000 C CNN
+F 2 "" H 1150 1400 50  0000 C CNN
+F 3 "" H 1150 1400 50  0000 C CNN
+	1    1150 1400
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
