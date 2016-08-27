@@ -315,8 +315,6 @@ Text GLabel 1550 3050 0    60   Input ~ 0
 AC-neut-low
 Text GLabel 2300 1850 2    60   Input ~ 0
 AC-live-f
-Text GLabel 1600 2250 0    60   Input ~ 0
-AC-live-f-low
 Text GLabel 4600 4400 0    60   Input ~ 0
 AC-live-f
 $Comp
@@ -332,8 +330,6 @@ F 3 "" H 5850 4500 50  0000 C CNN
 $EndComp
 Text GLabel 6450 4300 2    60   Input ~ 0
 AC-live-out
-Text GLabel 2500 1450 2    60   Input ~ 0
-AC-neut-low
 Text GLabel 1950 1150 2    60   Input ~ 0
 AC-live
 $Comp
@@ -408,8 +404,19 @@ F 3 "" H 1150 1400 50  0000 C CNN
 $EndComp
 Text GLabel 2300 2050 2    60   Input ~ 0
 AC-live-f-low
+$Comp
+L R R?
+U 1 1 57C402C2
+P 2250 1400
+F 0 "R?" V 2330 1400 50  0000 C CNN
+F 1 "R" V 2250 1400 50  0000 C CNN
+F 2 "" V 2180 1400 50  0000 C CNN
+F 3 "" H 2250 1400 50  0000 C CNN
+	1    2250 1400
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	1600 2250 1900 2250
+	950  2250 1900 2250
 Wire Wire Line
 	1800 2250 1800 2700
 Wire Wire Line
@@ -560,9 +567,20 @@ Wire Wire Line
 Wire Wire Line
 	1800 1350 1350 1350
 Wire Wire Line
-	2500 1450 1350 1450
+	1800 1450 1350 1450
 Wire Wire Line
 	1800 1300 1800 1450
 Connection ~ 1800 1450
 Connection ~ 1800 1300
+Wire Wire Line
+	2500 1650 950  1650
+Wire Wire Line
+	950  1650 950  2250
+Wire Wire Line
+	2400 1400 2500 1400
+Wire Wire Line
+	2500 1400 2500 1650
+Wire Wire Line
+	2100 1400 1800 1400
+Connection ~ 1800 1400
 $EndSCHEMATC
