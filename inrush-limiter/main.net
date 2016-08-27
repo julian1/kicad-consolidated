@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/meteo/mykicad2/inrush-limiter/main.sch)
-    (date "Sat 27 Aug 2016 22:11:47 AEST")
+    (date "Sun 28 Aug 2016 08:01:12 AEST")
     (tool "Eeschema 4.0.2+dfsg1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -77,7 +77,7 @@
       (tstamp 57C0DC4E))
     (comp (ref Q2)
       (value PN2222A)
-      (footprint TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval)
+      (footprint TO_SOT_Packages_THT:TO-92_Inline_Wide)
       (libsource (lib transistors) (part PN2222A))
       (sheetpath (names /) (tstamps /))
       (tstamp 57C0DE0A))
@@ -95,7 +95,7 @@
       (tstamp 57C1A333))
     (comp (ref Q1)
       (value PN2222A)
-      (footprint TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval)
+      (footprint TO_SOT_Packages_THT:TO-92_Inline_Wide)
       (libsource (lib transistors) (part PN2222A))
       (sheetpath (names /) (tstamps /))
       (tstamp 57C1BB6B))
