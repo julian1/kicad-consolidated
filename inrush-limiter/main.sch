@@ -70,12 +70,12 @@ $EndComp
 $Comp
 L FUSE F1
 U 1 1 57C0C016
-P 1900 1850
-F 0 "F1" H 2000 1900 50  0000 C CNN
-F 1 "FUSE" H 1800 1800 50  0000 C CNN
-F 2 "Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_SemiClosed_Casing10x25mm" H 1900 1850 50  0001 C CNN
-F 3 "" H 1900 1850 50  0000 C CNN
-	1    1900 1850
+P 1650 900
+F 0 "F1" H 1750 950 50  0000 C CNN
+F 1 "FUSE" H 1550 850 50  0000 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_SemiClosed_Casing10x25mm" H 1650 900 50  0001 C CNN
+F 3 "" H 1650 900 50  0000 C CNN
+	1    1650 900 
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -189,10 +189,10 @@ F 3 "" H 2600 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L GND #PWR6
 U 1 1 57C1A76B
 P 4950 3750
-F 0 "#PWR01" H 4950 3500 50  0001 C CNN
+F 0 "#PWR6" H 4950 3500 50  0001 C CNN
 F 1 "GND" H 4950 3600 50  0000 C CNN
 F 2 "" H 4950 3750 50  0000 C CNN
 F 3 "" H 4950 3750 50  0000 C CNN
@@ -200,10 +200,10 @@ F 3 "" H 4950 3750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L +5V #PWR5
 U 1 1 57C1A7D8
 P 4950 2450
-F 0 "#PWR02" H 4950 2300 50  0001 C CNN
+F 0 "#PWR5" H 4950 2300 50  0001 C CNN
 F 1 "+5V" H 4950 2590 50  0000 C CNN
 F 2 "" H 4950 2450 50  0000 C CNN
 F 3 "" H 4950 2450 50  0000 C CNN
@@ -211,10 +211,10 @@ F 3 "" H 4950 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR03
+L +5V #PWR1
 U 1 1 57C1B997
 P 1150 3550
-F 0 "#PWR03" H 1150 3400 50  0001 C CNN
+F 0 "#PWR1" H 1150 3400 50  0001 C CNN
 F 1 "+5V" H 1150 3690 50  0000 C CNN
 F 2 "" H 1150 3550 50  0000 C CNN
 F 3 "" H 1150 3550 50  0000 C CNN
@@ -222,10 +222,10 @@ F 3 "" H 1150 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L GND #PWR2
 U 1 1 57C1BA06
 P 1150 5500
-F 0 "#PWR04" H 1150 5250 50  0001 C CNN
+F 0 "#PWR2" H 1150 5250 50  0001 C CNN
 F 1 "GND" H 1150 5350 50  0000 C CNN
 F 2 "" H 1150 5500 50  0000 C CNN
 F 3 "" H 1150 5500 50  0000 C CNN
@@ -309,11 +309,9 @@ F 3 "" H 1450 5100 50  0000 C CNN
 	1    1450 5100
 	1    0    0    -1  
 $EndComp
-Text GLabel 1500 1850 0    60   Input ~ 0
-AC-live
 Text GLabel 1550 3050 0    60   Input ~ 0
 AC-neut-low
-Text GLabel 2300 1850 2    60   Input ~ 0
+Text GLabel 2500 900  2    60   Input ~ 0
 AC-live-f
 Text GLabel 4600 4400 0    60   Input ~ 0
 AC-live-f
@@ -330,13 +328,11 @@ F 3 "" H 5850 4500 50  0000 C CNN
 $EndComp
 Text GLabel 6450 4300 2    60   Input ~ 0
 AC-live-out
-Text GLabel 1950 1150 2    60   Input ~ 0
-AC-live
 $Comp
-L +5V #PWR05
+L +5V #PWR3
 U 1 1 57C33EC3
 P 4250 1200
-F 0 "#PWR05" H 4250 1050 50  0001 C CNN
+F 0 "#PWR3" H 4250 1050 50  0001 C CNN
 F 1 "+5V" H 4250 1340 50  0000 C CNN
 F 2 "" H 4250 1200 50  0000 C CNN
 F 3 "" H 4250 1200 50  0000 C CNN
@@ -344,10 +340,10 @@ F 3 "" H 4250 1200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L GND #PWR4
 U 1 1 57C33F05
 P 4250 1500
-F 0 "#PWR06" H 4250 1250 50  0001 C CNN
+F 0 "#PWR4" H 4250 1250 50  0001 C CNN
 F 1 "GND" H 4250 1350 50  0000 C CNN
 F 2 "" H 4250 1500 50  0000 C CNN
 F 3 "" H 4250 1500 50  0000 C CNN
@@ -376,9 +372,9 @@ F 3 "" H 5150 4450 50  0000 C CNN
 	1    5150 4450
 	1    0    0    1   
 $EndComp
-Text GLabel 1550 1550 2    60   Input ~ 0
+Text GLabel 2500 1550 2    60   Input ~ 0
 AC-live-out
-Text GLabel 2500 1250 2    60   Input ~ 0
+Text GLabel 2500 1200 2    60   Input ~ 0
 AC-neut
 $Comp
 L CONN_01X02 P2
@@ -402,21 +398,21 @@ F 3 "" H 1150 1400 50  0000 C CNN
 	1    1150 1400
 	-1   0    0    1   
 $EndComp
-Text GLabel 2300 2050 2    60   Input ~ 0
+Text GLabel 2500 1050 2    60   Input ~ 0
 AC-live-f-low
 $Comp
-L R R?
+L R R11
 U 1 1 57C402C2
-P 2250 1400
-F 0 "R?" V 2330 1400 50  0000 C CNN
-F 1 "R" V 2250 1400 50  0000 C CNN
-F 2 "" V 2180 1400 50  0000 C CNN
-F 3 "" H 2250 1400 50  0000 C CNN
-	1    2250 1400
+P 2250 1350
+F 0 "R11" V 2330 1350 50  0000 C CNN
+F 1 "0" V 2250 1350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 2180 1350 50  0001 C CNN
+F 3 "" H 2250 1350 50  0000 C CNN
+	1    2250 1350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	950  2250 1900 2250
+	1550 2250 1900 2250
 Wire Wire Line
 	1800 2250 1800 2700
 Wire Wire Line
@@ -525,16 +521,6 @@ Wire Wire Line
 	4950 2450 4950 2900
 Connection ~ 4950 2650
 Wire Wire Line
-	2150 1850 2300 1850
-Wire Wire Line
-	1650 1850 1500 1850
-Wire Wire Line
-	1950 1150 1700 1150
-Wire Wire Line
-	1700 1150 1700 1250
-Wire Wire Line
-	1700 1250 1350 1250
-Wire Wire Line
 	4250 1500 4250 1400
 Wire Wire Line
 	4250 1300 4250 1200
@@ -554,33 +540,45 @@ Wire Wire Line
 Wire Wire Line
 	2500 4450 2500 4100
 Wire Wire Line
-	1350 1550 1550 1550
+	1350 1550 2500 1550
 Wire Wire Line
-	2300 2050 2200 2050
+	2500 1200 2000 1200
 Wire Wire Line
-	2200 2050 2200 1850
-Connection ~ 2200 1850
+	1350 1350 2100 1350
 Wire Wire Line
-	2500 1250 1800 1250
+	2400 1350 2500 1350
+Text GLabel 2500 1350 2    60   Input ~ 0
+AC-neut-low
+Text GLabel 1550 2250 0    60   Input ~ 0
+AC-live-f-low
+$Comp
+L R R12
+U 1 1 57C4239E
+P 2250 1050
+F 0 "R12" V 2330 1050 50  0000 C CNN
+F 1 "0" V 2250 1050 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 2180 1050 50  0001 C CNN
+F 3 "" H 2250 1050 50  0000 C CNN
+	1    2250 1050
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	1800 1250 1800 1350
+	2000 1050 2100 1050
 Wire Wire Line
-	1800 1350 1350 1350
+	2000 1200 2000 1450
+Connection ~ 2000 1350
 Wire Wire Line
-	1800 1450 1350 1450
+	2400 1050 2500 1050
 Wire Wire Line
-	1800 1300 1800 1450
-Connection ~ 1800 1450
-Connection ~ 1800 1300
+	1900 900  2500 900 
 Wire Wire Line
-	2500 1650 950  1650
+	2000 900  2000 1050
+Connection ~ 2000 1050
+Connection ~ 2000 900 
 Wire Wire Line
-	950  1650 950  2250
+	2000 1450 1350 1450
 Wire Wire Line
-	2400 1400 2500 1400
+	1400 900  1350 900 
 Wire Wire Line
-	2500 1400 2500 1650
-Wire Wire Line
-	2100 1400 1800 1400
-Connection ~ 1800 1400
+	1350 900  1350 1250
 $EndSCHEMATC
