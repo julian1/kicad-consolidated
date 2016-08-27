@@ -1,0 +1,8 @@
+
+add genuine gnd plane
+
+done - molex connectors
+
+what to do with unused lm393 pins. 
+what to do with relay pins
+

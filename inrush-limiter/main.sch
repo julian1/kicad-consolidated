@@ -646,23 +646,8 @@ F 3 "" H 5500 1100 50  0000 C CNN
 	1    5500 1100
 	1    0    0    -1  
 $EndComp
-Text GLabel 4950 1000 0    60   Input ~ 0
-earth
 Wire Wire Line
-	4950 1000 5100 1000
-$Comp
-L R R?
-U 1 1 57C45714
-P 5250 1000
-F 0 "R?" V 5330 1000 50  0000 C CNN
-F 1 "0" V 5250 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 5180 1000 50  0001 C CNN
-F 3 "" H 5250 1000 50  0000 C CNN
-	1    5250 1000
-	0    1    1    0   
-$EndComp
+	5650 1050 5500 1050
 Wire Wire Line
-	5400 1000 5500 1000
-Wire Wire Line
-	5500 1000 5500 1100
+	5500 1050 5500 1100
 $EndSCHEMATC

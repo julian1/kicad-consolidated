@@ -1,5 +1,8 @@
 *.bak
 *-bak
+*.bck
 old*
 gerber
 tmp
+*.swp
+*.swo
