@@ -6,3 +6,7 @@ done - molex connectors
 what to do with unused lm393 pins. 
 what to do with relay pins
 
+clearance & creapage distance - 0.25mm is good for 1.25kv but spec requries more.
+
+- setting clearance to 1mm produces too many errors,
+- setting to 0.75 and it's only the to92 transistors, that have problems.
