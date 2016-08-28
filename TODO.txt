@@ -2,27 +2,29 @@
 http://www.electronics-project-design.com/PCB-Design.html
   - 1mm trace should carry almost 3 amps!
   - 2mm 4 amps 
-
   - 8mm is between mains and other isolated tracks.
-
   - ipc recommends 1.27mm clearance for uncoated board, upto 10k feet
+  - "We use (UK) 3mm as safety gap for mains to anything else."
 
-  - We use (UK) 3mm as safety gap for mains to anything else.
+use a single voltage divider, and use a pot to adjust the timing.
 
 ----
-it's around the wrong way - the x2 cap should be near the power connector.
+done - it's around the wrong way - the x2 cap should be near the power connector.
 
-high voltage traces should be as short as possible
+done - high voltage traces should be as short as possible
+done - separate netlists for high power and high-voltage
 
-we can increase clearence by narrowing the trace 
+done - we can increase clearence by narrowing the trace 
 
 ---
-add genuine gnd plane
+- maybe add genuine gnd plane
 
-done - molex connectors
+- need power connectors - 9.53mm standard, pcb terminal blocks.
+
 
 what to do with unused lm393 pins. 
-what to do with relay pins
+what to do with unused relay pins
+
 
 clearance & creapage distance - 0.25mm is good for 1.25kv but spec requries more.
 
