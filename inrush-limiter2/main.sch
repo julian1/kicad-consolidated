@@ -598,4 +598,26 @@ Wire Wire Line
 	4650 2500 4650 2250
 Wire Wire Line
 	4700 3400 4700 3600
+Text GLabel 8850 4250 2    60   Input ~ 0
+AC-live-f
+$Comp
+L R 100
+U 1 1 57CC96A4
+P 8450 4450
+F 0 "100 ohm NTC" V 8530 4450 50  0000 C CNN
+F 1 "R" V 8450 4450 50  0000 C CNN
+F 2 "" V 8380 4450 50  0000 C CNN
+F 3 "" H 8450 4450 50  0000 C CNN
+	1    8450 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8850 4250 8100 4250
+Wire Wire Line
+	8700 4250 8700 4450
+Wire Wire Line
+	8700 4450 8600 4450
+Connection ~ 8700 4250
+Wire Wire Line
+	8300 4450 8100 4450
 $EndSCHEMATC
