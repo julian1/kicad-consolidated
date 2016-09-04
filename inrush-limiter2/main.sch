@@ -620,4 +620,31 @@ Wire Wire Line
 Connection ~ 8700 4250
 Wire Wire Line
 	8300 4450 8100 4450
+$Comp
+L LM393 U?
+U 2 1 57CCA21B
+P 5550 6300
+F 0 "U?" H 5700 6450 50  0000 C CNN
+F 1 "LM393" H 5800 6150 50  0000 C CNN
+F 2 "" H 5550 6300 50  0000 C CNN
+F 3 "" H 5550 6300 50  0000 C CNN
+	2    5550 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 6200 4950 6200
+Wire Wire Line
+	4950 6200 4950 6700
+Wire Wire Line
+	4950 6400 5250 6400
+Wire Wire Line
+	4950 6700 6000 6700
+Wire Wire Line
+	6000 6700 6000 6300
+Wire Wire Line
+	6000 6300 5850 6300
+Connection ~ 4950 6400
+Wire Wire Line
+	5450 6600 5450 6700
+Connection ~ 5450 6700
 $EndSCHEMATC
