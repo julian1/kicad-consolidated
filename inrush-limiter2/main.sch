@@ -111,28 +111,6 @@ F 3 "" H 4350 2950 50  0000 C CNN
 	1    4350 2950
 	1    0    0    -1  
 $EndComp
-$Comp
-L +5V #PWR01
-U 1 1 57C1B997
-P 1150 4050
-F 0 "#PWR01" H 1150 3900 50  0001 C CNN
-F 1 "+5V" H 1150 4190 50  0000 C CNN
-F 2 "" H 1150 4050 50  0000 C CNN
-F 3 "" H 1150 4050 50  0000 C CNN
-	1    1150 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 57C1BA06
-P 1150 6200
-F 0 "#PWR02" H 1150 5950 50  0001 C CNN
-F 1 "GND" H 1150 6050 50  0000 C CNN
-F 2 "" H 1150 6200 50  0000 C CNN
-F 3 "" H 1150 6200 50  0000 C CNN
-	1    1150 6200
-	1    0    0    -1  
-$EndComp
 Text GLabel 1600 2400 0    60   Input ~ 0
 AC-neut-low
 Text GLabel 3900 750  2    60   Input ~ 0
@@ -391,28 +369,6 @@ F 3 "" H 2200 2200 50  0000 C CNN
 	1    2200 2200
 	1    0    0    -1  
 $EndComp
-$Comp
-L +5V #PWR03
-U 1 1 57CC9197
-P 6550 2150
-F 0 "#PWR03" H 6550 2000 50  0001 C CNN
-F 1 "+5V" H 6550 2290 50  0000 C CNN
-F 2 "" H 6550 2150 50  0000 C CNN
-F 3 "" H 6550 2150 50  0000 C CNN
-	1    6550 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR04
-U 1 1 57CC91E5
-P 6550 3850
-F 0 "#PWR04" H 6550 3600 50  0001 C CNN
-F 1 "GND" H 6550 3700 50  0000 C CNN
-F 2 "" H 6550 3850 50  0000 C CNN
-F 3 "" H 6550 3850 50  0000 C CNN
-	1    6550 3850
-	1    0    0    -1  
-$EndComp
 Text GLabel 7200 4550 2    60   Input ~ 0
 AC-live-f
 $Comp
@@ -458,16 +414,11 @@ Wire Wire Line
 Connection ~ 2650 750 
 Wire Wire Line
 	2650 900  2650 750 
-Connection ~ 3750 7100
-Wire Wire Line
-	3750 7000 3750 7450
 Connection ~ 3250 6800
-Wire Wire Line
-	3250 7100 3750 7100
 Wire Wire Line
 	3250 6800 3550 6800
 Wire Wire Line
-	3250 6600 3250 7100
+	3250 6600 3250 7250
 Wire Wire Line
 	3550 6600 3250 6600
 Wire Wire Line
@@ -516,7 +467,7 @@ Connection ~ 1150 5900
 Wire Wire Line
 	1150 5600 1150 6200
 Wire Wire Line
-	1150 4000 1150 4700
+	1150 4050 1150 4700
 Wire Wire Line
 	5400 5550 5600 5550
 Wire Wire Line
@@ -629,17 +580,6 @@ Connection ~ 4350 3650
 Wire Wire Line
 	3100 2400 3100 3650
 $Comp
-L GND #PWR05
-U 1 1 57CE7D0C
-P 3750 7500
-F 0 "#PWR05" H 3750 7250 50  0001 C CNN
-F 1 "GND" H 3750 7350 50  0000 C CNN
-F 2 "" H 3750 7500 50  0000 C CNN
-F 3 "" H 3750 7500 50  0000 C CNN
-	1    3750 7500
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R12
 U 1 1 57CE8283
 P 6300 2400
@@ -654,19 +594,6 @@ Wire Wire Line
 	6000 2400 6150 2400
 Wire Wire Line
 	6450 2400 6550 2400
-Wire Wire Line
-	3750 6200 3750 6400
-$Comp
-L +5V #PWR06
-U 1 1 57CE86AC
-P 3750 6200
-F 0 "#PWR06" H 3750 6050 50  0001 C CNN
-F 1 "+5V" H 3750 6340 50  0000 C CNN
-F 2 "" H 3750 6200 50  0000 C CNN
-F 3 "" H 3750 6200 50  0000 C CNN
-	1    3750 6200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4350 3100 4350 3650
 Wire Wire Line
@@ -692,4 +619,16 @@ Connection ~ 6600 5050
 Wire Wire Line
 	2250 4500 2250 4350
 Connection ~ 2250 4350
+Text GLabel 6550 2150 2    60   Input ~ 0
++5V
+Text GLabel 6550 3850 2    60   Input ~ 0
+GND
+Text GLabel 1100 4050 0    60   Input ~ 0
++5V
+Wire Wire Line
+	1100 4050 1150 4050
+Text GLabel 1150 6200 0    60   Input ~ 0
+GND
+Text GLabel 3250 7250 0    60   Input ~ 0
+GND
 $EndSCHEMATC
