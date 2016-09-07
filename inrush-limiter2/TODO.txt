@@ -1,5 +1,7 @@
 
-- fix transformer footprint
+- mounting holes.
+
+- done - fix transformer footprint
 - done - fix terminal block footprint
 - done - fix 1m trim pot
 - done - pin header support for external 5v supply
