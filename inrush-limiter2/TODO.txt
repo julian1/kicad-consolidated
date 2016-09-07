@@ -1,5 +1,7 @@
 
 - mounting holes.
+- check the timing cap will fit. (it's too close to the pot)
+- try to move the NTC resistor to create space
 
 - done - fix transformer footprint
 - done - fix terminal block footprint
