@@ -282,17 +282,6 @@ F 3 "" H 2250 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RVAR RVAR1
-U 1 1 57CC0108
-P 2650 4900
-F 0 "RVAR1" V 2730 4850 50  0000 C CNN
-F 1 "1M" V 2570 4960 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" H 2650 4900 50  0001 C CNN
-F 3 "" H 2650 4900 50  0000 C CNN
-	1    2650 4900
-	0    1    1    0   
-$EndComp
-$Comp
 L CP CP1
 U 1 1 57CC0848
 P 3100 5450
@@ -490,7 +479,7 @@ Wire Wire Line
 	2900 4900 3550 4900
 Connection ~ 2250 4900
 Wire Wire Line
-	2400 4900 2250 4900
+	2250 4900 2550 4900
 Wire Wire Line
 	2250 4800 2250 5150
 Wire Wire Line
@@ -608,9 +597,9 @@ Wire Wire Line
 Wire Wire Line
 	5550 4950 5550 5200
 Wire Wire Line
-	5550 5200 6600 5200
+	6600 5200 5550 5200
 Wire Wire Line
-	6600 5200 6600 4850
+	6600 4850 6600 5200
 Wire Wire Line
 	6600 4850 6450 4850
 Wire Wire Line
@@ -631,4 +620,19 @@ Text GLabel 1150 6200 0    60   Input ~ 0
 GND
 Text GLabel 3250 7250 0    60   Input ~ 0
 GND
+$Comp
+L POT RV1
+U 1 1 57CFC846
+P 2900 4750
+F 0 "RV1" H 2900 4670 50  0000 C CNN
+F 1 "POT" H 2900 4750 50  0000 C CNN
+F 2 "" H 2900 4750 50  0000 C CNN
+F 3 "" H 2900 4750 50  0000 C CNN
+	1    2900 4750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2750 4750 2550 4750
+Wire Wire Line
+	2550 4750 2550 4900
 $EndSCHEMATC
