@@ -382,6 +382,64 @@ F 3 "" H 2650 1050 50  0000 C CNN
 	1    2650 1050
 	-1   0    0    1   
 $EndComp
+$Comp
+L R R12
+U 1 1 57CE8283
+P 6300 2400
+F 0 "R12" V 6380 2400 50  0000 C CNN
+F 1 "0" V 6300 2400 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 6230 2400 50  0001 C CNN
+F 3 "" H 6300 2400 50  0000 C CNN
+	1    6300 2400
+	0    1    1    0   
+$EndComp
+Text GLabel 6550 2150 2    60   Input ~ 0
++5V
+Text GLabel 6550 3850 2    60   Input ~ 0
+GND
+Text GLabel 1100 4050 0    60   Input ~ 0
++5V
+Text GLabel 1150 6200 0    60   Input ~ 0
+GND
+Text GLabel 3250 7250 0    60   Input ~ 0
+GND
+$Comp
+L POT RV1
+U 1 1 57CFC846
+P 2900 4750
+F 0 "RV1" H 2900 4670 50  0000 C CNN
+F 1 "POT" H 2900 4750 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_3296W_3-8Zoll_Inline_ScrewUp" H 2900 4750 50  0001 C CNN
+F 3 "" H 2900 4750 50  0000 C CNN
+	1    2900 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P2
+U 1 1 57D01BCD
+P 7400 2950
+F 0 "P2" H 7400 3100 50  0000 C CNN
+F 1 "CONN_01X02" V 7500 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7400 2950 50  0001 C CNN
+F 3 "" H 7400 2950 50  0000 C CNN
+	1    7400 2950
+	-1   0    0    1   
+$EndComp
+Text GLabel 7600 2550 2    60   Input ~ 0
++5V
+Text GLabel 7650 3300 2    60   Input ~ 0
+GND
+$Comp
+L MY-TRANSFO T1
+U 1 1 57D04545
+P 2200 2200
+F 0 "T1" H 2200 2450 50  0000 C CNN
+F 1 "MY-TRANSFO" H 2200 1900 50  0000 C CNN
+F 2 "test:my-transformer" H 2200 2200 50  0001 C CNN
+F 3 "" H 2200 2200 50  0000 C CNN
+	1    2200 2200
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	6550 2400 6550 2150
 Wire Wire Line
@@ -396,7 +454,9 @@ Connection ~ 3250 6800
 Wire Wire Line
 	3250 6800 3550 6800
 Wire Wire Line
-	3250 6600 3250 7250
+	3250 6600 3250 6800
+Wire Wire Line
+	3250 6800 3250 7250
 Wire Wire Line
 	3550 6600 3250 6600
 Wire Wire Line
@@ -407,7 +467,9 @@ Wire Wire Line
 Wire Wire Line
 	7800 4550 7800 4750
 Wire Wire Line
-	7200 4550 7950 4550
+	7200 4550 7800 4550
+Wire Wire Line
+	7800 4550 7950 4550
 Wire Wire Line
 	6550 3650 6550 3850
 Wire Wire Line
@@ -433,15 +495,23 @@ Connection ~ 4550 4350
 Wire Wire Line
 	4550 4350 4550 4500
 Wire Wire Line
-	5200 5900 6000 5900
+	5200 5900 5700 5900
 Wire Wire Line
-	4550 4800 4550 5650
+	5700 5900 6000 5900
+Wire Wire Line
+	4550 4800 4550 5000
+Wire Wire Line
+	4550 5000 4550 5650
 Connection ~ 1150 4350
 Connection ~ 1150 5900
 Wire Wire Line
-	1150 5600 1150 6200
+	1150 5600 1150 5900
 Wire Wire Line
-	1150 4050 1150 4700
+	1150 5900 1150 6200
+Wire Wire Line
+	1150 4050 1150 4350
+Wire Wire Line
+	1150 4350 1150 4700
 Wire Wire Line
 	6150 5550 6350 5550
 Wire Wire Line
@@ -461,14 +531,20 @@ Wire Wire Line
 Wire Wire Line
 	3100 4900 3100 5300
 Wire Wire Line
-	2900 4900 3550 4900
+	2900 4900 3100 4900
+Wire Wire Line
+	3100 4900 3550 4900
 Connection ~ 2250 4900
 Wire Wire Line
 	2250 4900 2550 4900
 Wire Wire Line
-	2250 4800 2250 5150
+	2250 4800 2250 4900
 Wire Wire Line
-	1600 4900 1600 5300
+	2250 4900 2250 5150
+Wire Wire Line
+	1600 4900 1600 5100
+Wire Wire Line
+	1600 5100 1600 5300
 Wire Wire Line
 	2250 5450 2250 5500
 Connection ~ 2250 5900
@@ -484,12 +560,22 @@ Connection ~ 5200 3650
 Wire Wire Line
 	5200 3650 5200 3500
 Wire Wire Line
-	1150 5900 4350 5900
+	1150 5900 1600 5900
+Wire Wire Line
+	1600 5900 2250 5900
+Wire Wire Line
+	2250 5900 3100 5900
+Wire Wire Line
+	3100 5900 3750 5900
+Wire Wire Line
+	3750 5900 4350 5900
 Connection ~ 1600 4350
 Wire Wire Line
 	1600 4350 1600 4600
 Wire Wire Line
-	5200 2900 5200 3100
+	5200 2900 5200 3000
+Wire Wire Line
+	5200 3000 5200 3100
 Wire Wire Line
 	5200 3000 5200 3200
 Connection ~ 5200 2400
@@ -505,28 +591,52 @@ Wire Wire Line
 	3400 1450 1350 1450
 Connection ~ 3400 750 
 Wire Wire Line
-	2200 750  3900 750 
+	2200 750  2650 750 
+Wire Wire Line
+	2650 750  3400 750 
+Wire Wire Line
+	3400 750  3900 750 
 Wire Wire Line
 	3800 1050 3900 1050
 Connection ~ 3400 1350
 Wire Wire Line
-	3400 1200 3400 1450
+	3400 1200 3400 1350
+Wire Wire Line
+	3400 1350 3400 1450
 Wire Wire Line
 	3800 1350 3900 1350
 Wire Wire Line
-	1350 1350 3500 1350
+	1350 1350 2650 1350
+Wire Wire Line
+	2650 1350 3400 1350
+Wire Wire Line
+	3400 1350 3500 1350
 Wire Wire Line
 	3900 1200 3400 1200
 Wire Wire Line
 	1350 1550 3900 1550
 Wire Wire Line
-	1150 4350 6400 4350
+	1150 4350 1600 4350
+Wire Wire Line
+	1600 4350 2250 4350
+Wire Wire Line
+	2250 4350 3750 4350
+Wire Wire Line
+	3750 4350 4550 4350
+Wire Wire Line
+	4550 4350 5700 4350
+Wire Wire Line
+	5700 4350 6400 4350
 Connection ~ 4350 2400
 Wire Wire Line
 	4350 2400 4350 2800
 Connection ~ 3950 2400
 Wire Wire Line
-	3950 2400 5600 2400
+	3950 2400 4350 2400
+Wire Wire Line
+	4350 2400 5200 2400
+Wire Wire Line
+	5200 2400 5600 2400
 Connection ~ 3250 2400
 Wire Wire Line
 	3250 2400 3100 2400
@@ -534,32 +644,33 @@ Connection ~ 3600 2600
 Wire Wire Line
 	3600 2800 3600 2600
 Wire Wire Line
-	3550 2600 3650 2600
+	3550 2600 3600 2600
 Wire Wire Line
-	3950 2200 3950 2600
+	3600 2600 3650 2600
 Wire Wire Line
-	3250 2200 3250 2600
+	3950 2200 3950 2400
+Wire Wire Line
+	3950 2400 3950 2600
+Wire Wire Line
+	3250 2200 3250 2400
+Wire Wire Line
+	3250 2400 3250 2600
 Connection ~ 3600 2200
 Wire Wire Line
-	3550 2200 3650 2200
+	3550 2200 3600 2200
+Wire Wire Line
+	3600 2200 3650 2200
 Wire Wire Line
 	3600 2000 3600 2200
 Wire Wire Line
-	3100 3650 6550 3650
+	3100 3650 4350 3650
+Wire Wire Line
+	4350 3650 5200 3650
+Wire Wire Line
+	5200 3650 6550 3650
 Connection ~ 4350 3650
 Wire Wire Line
 	3100 2400 3100 3650
-$Comp
-L R R12
-U 1 1 57CE8283
-P 6300 2400
-F 0 "R12" V 6380 2400 50  0000 C CNN
-F 1 "0" V 6300 2400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 6230 2400 50  0001 C CNN
-F 3 "" H 6300 2400 50  0000 C CNN
-	1    6300 2400
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6000 2400 6150 2400
 Wire Wire Line
@@ -580,7 +691,9 @@ Wire Wire Line
 Wire Wire Line
 	6300 5200 7350 5200
 Wire Wire Line
-	7350 5200 7350 4850
+	7350 5200 7350 5050
+Wire Wire Line
+	7350 5050 7350 4850
 Wire Wire Line
 	7350 4850 7200 4850
 Wire Wire Line
@@ -589,82 +702,35 @@ Connection ~ 7350 5050
 Wire Wire Line
 	2250 4500 2250 4350
 Connection ~ 2250 4350
-Text GLabel 6550 2150 2    60   Input ~ 0
-+5V
-Text GLabel 6550 3850 2    60   Input ~ 0
-GND
-Text GLabel 1100 4050 0    60   Input ~ 0
-+5V
 Wire Wire Line
 	1100 4050 1150 4050
-Text GLabel 1150 6200 0    60   Input ~ 0
-GND
-Text GLabel 3250 7250 0    60   Input ~ 0
-GND
-$Comp
-L POT RV1
-U 1 1 57CFC846
-P 2900 4750
-F 0 "RV1" H 2900 4670 50  0000 C CNN
-F 1 "POT" H 2900 4750 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_3296W_3-8Zoll_Inline_ScrewUp" H 2900 4750 50  0001 C CNN
-F 3 "" H 2900 4750 50  0000 C CNN
-	1    2900 4750
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2750 4750 2550 4750
 Wire Wire Line
 	2550 4750 2550 4900
 Wire Wire Line
 	2600 2400 2600 2800
-$Comp
-L CONN_01X02 P2
-U 1 1 57D01BCD
-P 7400 2950
-F 0 "P2" H 7400 3100 50  0000 C CNN
-F 1 "CONN_01X02" V 7500 2950 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7400 2950 50  0001 C CNN
-F 3 "" H 7400 2950 50  0000 C CNN
-	1    7400 2950
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2600 2000 3600 2000
 Wire Wire Line
 	2600 2800 3600 2800
-Text GLabel 7600 2550 2    60   Input ~ 0
-+5V
-Text GLabel 7650 3300 2    60   Input ~ 0
-GND
 Wire Wire Line
 	7600 3000 7600 3300
 Wire Wire Line
 	7600 3300 7650 3300
 Wire Wire Line
 	7600 2900 7600 2550
-$Comp
-L MY-TRANSFO T1
-U 1 1 57D04545
-P 2200 2200
-F 0 "T1" H 2200 2450 50  0000 C CNN
-F 1 "MY-TRANSFO" H 2200 1900 50  0000 C CNN
-F 2 "test:my-transformer" H 2200 2200 50  0001 C CNN
-F 3 "" H 2200 2200 50  0000 C CNN
-	1    2200 2200
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	4900 5900 4750 5900
 $Comp
 L R R13
 U 1 1 57D05B30
 P 5050 5900
 F 0 "R13" V 5130 5900 50  0000 C CNN
 F 1 "0" V 5050 5900 50  0000 C CNN
-F 2 "" V 4980 5900 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4980 5900 50  0001 C CNN
 F 3 "" H 5050 5900 50  0000 C CNN
 	1    5050 5900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4900 5900 4750 5900
 $EndSCHEMATC
