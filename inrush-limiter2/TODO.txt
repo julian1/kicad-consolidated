@@ -1,4 +1,19 @@
 
+buy a centre punch - from model shop?
+
+--- 
+
+actually the cap is a problem - because it means we are not sensing current on the
+  primary side - if it drops out? - maybe ok with higher relay??
+
+discharge resistor across cap?
+
+larger space for caps
+invert regulator diodes which were incorrect
+heat dissipation space for ntc 
+more space for mov
+
+----i
 - have an opto-coupler alternative to short the relay
 - use a jumper to select opto or timer.
 
