@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/meteo/kicad-consolidated/inrush-limiter2/main.sch)
-    (date "Wed 07 Sep 2016 22:23:47 AEST")
+    (date "Thu 08 Sep 2016 16:02:20 AEST")
     (tool "Eeschema 4.0.2+dfsg1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -137,7 +137,7 @@
       (tstamp 57CB94CF))
     (comp (ref CP1)
       (value 470nF)
-      (footprint Capacitors_ThroughHole:C_Rect_L7_W3.5_P5)
+      (footprint Capacitors_ThroughHole:C_Rect_L13_W6_H12_P10)
       (libsource (lib device) (part CP))
       (sheetpath (names /) (tstamps /))
       (tstamp 57CC0848))
