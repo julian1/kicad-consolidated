@@ -1,26 +1,47 @@
 
+as a DUT device a simpler approach
+  - three way switch. off, ntc resistor, on
+  - and fuse it.
+
+-----
+for standalone project
+  - having transformer is good. not an issue if large.
+  - eg. cap dropper is smaller, but doesn't matter if stand-alone.
+
+if integrated into project, then might use micro to turn on (ntc protects against non turn on).
+  use power from either,
+  - a separate 5v winding, to power relay and optocoupler.
+  - or main 5v board voltage to relay.
+
+the problem of cap-dropper is that it's 5v differential. not 5 volt with respect to earth.
+
+the NTC solves the problem of the relay failing to close
+
+----
+
 buy a centre punch - from model shop?
 
 --- 
 
-actually the cap is a problem - because it means we are not sensing current on the
-  primary side - if it drops out? - maybe ok with higher relay??
 
-discharge resistor across cap?
 
-larger space for caps
-invert regulator diodes which were incorrect
-heat dissipation space for ntc 
-more space for mov
+fix/investigate - invert regulator diodes which were incorrect?
+change filter cap value.
 
-----i
-- have an opto-coupler alternative to short the relay
-- use a jumper to select opto or timer.
+TODO
 
 - mounting holes.
-- done - check the timing cap will fit. (it's too close to the pot)
-- try to move the NTC resistor to create space
+- kickback protection diode for the coil relay.
+- space around fuse to make it easier to access/change
+- increase clearance between mov and fuse 
+- cap for zener reference to stabilize ripple.
+- larger space for filter cap - maybe no because 16V 2200uF is small footprint 
+- maybe more heat dissipation space for ntc 
+- don't require discharge resistor across cap - because its low voltage
+- is a large filter cap a problem? it means we potentially continue to have power, even after interruption to power 
+- have an opto-coupler alternative to short the relay (use a jumper to select opto or timer).
 
+- done - check the timing cap will fit. (it's too close to the pot)
 - done - fix transformer footprint
 - done - fix terminal block footprint
 - done - fix 1m trim pot
